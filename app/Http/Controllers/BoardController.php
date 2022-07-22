@@ -35,6 +35,9 @@ class BoardController extends Controller
     public function show(Request $req)
     {
         $id = $req->input('id');
+        $board = Board::find($id);
+        $board->hits++;
+        $board->save();
         return view('board/show')->with("data", Board::findOrFail($id));
     }
 
