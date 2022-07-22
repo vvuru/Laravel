@@ -29,7 +29,7 @@ class BoardController extends Controller
             "hits" => 0,
         ]);
         $board->save();
-        return redirect('/boards');
+        return redirect()->route('boards.show', ["id" => $board->id]);
     }
 
     public function show(Request $req)
