@@ -32,8 +32,9 @@ class BoardController extends Controller
         return redirect('/boards');
     }
 
-    public function show()
+    public function show(Request $req)
     {
-        return view('board/show');
+        $id = $req->input('id');
+        return view('board/show')->with("data", Board::findOrFail($id));
     }
 }

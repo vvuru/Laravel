@@ -9,7 +9,21 @@
 </head>
 
 <body>
-    <h1>board show</h1>
+    {{-- 주석처리 --}}
+    <div>
+        <a href="{{ url('/boards') }}">홈</a>
+        <a href=""><button type="button">수정</button></a>
+        <button type="button" id="btnDel">삭제</button>
+    </div>
+    <div>제목: {{$data->title}}</div>
+    <div>조회수: {{$data->hits}}</div>
+    <div>등록일: {{$data->created_at}}</div>
+    <div>수정일: {{$data->updated_at}}</div>
+    <div>내용</div>
+    <div>{{$data->ctnt}}</div>
+    <script>
+        const btnDel = document.querySelector('#btn')
+    </script>
 </body>
 
 </html>
