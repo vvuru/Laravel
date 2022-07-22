@@ -23,4 +23,5 @@ Route::prefix('boards')->group(function () {
     Route::get('create', [BoardController::class, 'create'])->name('boards.create');
     Route::post('store', [BoardController::class, 'store'])->name('boards.store');
     Route::get('show', [BoardController::class, 'show'])->name('boards.show');
+    Route::get('destroy', [BoardController::class, 'destroy']);
 });

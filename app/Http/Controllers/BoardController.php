@@ -37,4 +37,11 @@ class BoardController extends Controller
         $id = $req->input('id');
         return view('board/show')->with("data", Board::findOrFail($id));
     }
+
+    public function destroy(Request $req)
+    {
+        $id = $req->input('id');
+        Board::find($id)->delete();
+        return redirect('/boards');
+    }
 }
