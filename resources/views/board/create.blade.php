@@ -14,7 +14,7 @@
         <input type="hidden" name="id" value="{{ isset($data) ? $data->id : 0 }}">
         <div><label>제목: <input type="text" name="title" value="{{isset($data) ? $data->title : ''}}"> </label></div>
         <div><label>내용: <textarea name="ctnt">{{isset($data) ? $data->ctnt : ''}}</textarea></label></div>
-        <input type="submit" value="{{ isset($data) ? '수정' : 저장">
+        <input type="submit" value="{{ isset($data) ? '수정' : '저장'}}">
         @csrf
     </form>
 </body>
